@@ -1,0 +1,209 @@
+.map-view {
+  display: flex;
+  gap: 0;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex: 1;
+  min-height: 600px;
+  height: 82vh;
+  box-shadow: var(--shadow-card);
+}
+
+.map-view .leaflet-container {
+  border: none;
+  outline: none;
+}
+
+.map-view .leaflet-control-attribution {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.map-view .leaflet-control-zoom a {
+  border: none;
+  box-shadow: none;
+}
+
+.map-container {
+  flex: 1;
+  min-height: 100%;
+  z-index: 1;
+}
+
+.map-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border);
+  background: #fff;
+}
+
+.map-sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.map-sidebar-header h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 4px;
+}
+
+.map-sidebar-header p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.map-sidebar-sections {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.map-section-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin: 0 6px 2px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-section-title::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.map-section-title[data-tipe="eksisting"]::before {
+  background: #1e40af;
+}
+
+.map-section-title[data-tipe="baru"]::before {
+  background: #eab308;
+}
+
+.map-industri-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.map-industri-item:hover {
+  background: #f1f5f9;
+}
+
+.map-industri-item.active {
+  background: #eef2ff;
+}
+
+.map-industri-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.map-industri-meta {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.map-detail {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  background: #fafafa;
+}
+
+.map-detail h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 6px;
+}
+
+.map-detail p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0 0 3px;
+}
+
+.map-detail-mahasiswa {
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+}
+
+.map-detail-mahasiswa h5 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.map-mahasiswa-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  font-size: 0.75rem;
+}
+
+.map-mahasiswa-nama {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.map-mahasiswa-kelas {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.custom-marker {
+  background: none !important;
+  border: none !important;
+}
+
+
+
+@media (max-width: 768px) {
+  .map-view {
+    flex-direction: column;
+    max-height: none;
+    height: auto;
+    min-height: auto;
+  }
+
+  .map-container {
+    min-height: 50vh;
+    height: 50vh;
+  }
+
+  .map-sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    max-height: 300px;
+  }
+}

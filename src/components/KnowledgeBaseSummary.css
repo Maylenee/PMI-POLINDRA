@@ -4,6 +4,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: var(--shadow-card);
 }
 
 .kb-summary-header {
@@ -12,7 +13,7 @@
   justify-content: space-between;
   padding: 14px 18px;
   border-bottom: 1px solid var(--border);
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
 }
 
 .kb-summary-title-row {

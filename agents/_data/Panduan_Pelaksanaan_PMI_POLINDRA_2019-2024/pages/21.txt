@@ -1,0 +1,34 @@
+15  
+  
+ Nama Penulis yang terdiri dari tiga kata, misalnya Tubagus Asep 
+Nurdin maka menjadi: Nurdin, Tubagus Asep. 
+2. Jika terdapat lebih dari 3 (tiga) pengarang, maka hanya nama pengarang 
+pertama saja yang ditulis dan ditambahkan et al. 
+3. Setiap pustaka diketik 1,5 spasi baik di dalam pustaka yang sama maupun antar 
+pustaka. 
+Penyusunan daftar pustaka diurutkan secara alfabetis berdasarkan nama 
+penulis tanpa gelar kesarjanaan.  Pustaka yang dikutip dapat berasal dari buku , 
+jurnal / paper, internet, atau tugas akhir, skripsi, tesis, dan disertasi . Adapun 
+susunan daftar pustaka berdasarkan asal sumbernya b eserta contoh penulisannya 
+dapat disajikan sebagai berikut: 
+A. Buku 
+Nama Pengarang. Tahun. Judul Buku. Kota: Penerbit. 
+Contoh: 
+Lakshman, Bulusu dan Abellera, Rosendo. 2018. Oracle Business Intelligence 
+with Machine Learning. New York: Apress Media. 
+B. Jurnal / Paper 
+Nama Pengarang. Tahun. Judul Artikel. Nama Jurnal. Volume, Halaman. 
+Contoh: 
+Garousi, Vahid and Mika V. Mantyla. 2016. When and What to Automate in 
+Software Testing? A Multi-vocal Literature Review. Information and 
+Software Technology. 76, 92-117. 
+C. Internet  
+Nama Penulis. Tahun.  Judul Artikel. Alamat situs. Tanggal akses. 
+Contoh: 
+Alayón, David. 2018. Understanding Artificial Intelligence . 
+https://medium.com/future-today/understanding-artificial-intelligence-
+f800b51c767f. Diakses pada tanggal 21 April 2019. 
+D. Tugas Akhir, Skripsi, Tesis, Disertasi 
+Nama Penulis. Tahun. Judul. Kota: Institusi Pendidikan. 
+Contoh: 
+15

@@ -1,0 +1,6 @@
+(Belum ada jadwal seminar.)
+5. Ringkasan per Daerah / Kota
+Daerah / Kota Jumlah Industri Jumlah Mahasiswa Magang
+Cirebon 2 6
+Indramayu 2 6
+Majalengka 1 3

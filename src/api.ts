@@ -45,6 +45,64 @@ interface SSEEvent {
   id?: string;
 }
 
+function conversationId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+}
+
+export async function syncPmiData(data: any) {
+  const res = await fetch("/sync-pmi-data", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
+    body: JSON.stringify({ data }),
+  });
+  return res.json();
+}
+
+export async function ragFullSync(data: any) {
+  const res = await fetch("/rag-full-sync", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
+    body: JSON.stringify({ data }),
+  });
+  return res.json();
+}
+
+export async function ragFiles() {
+  const res = await fetch("/rag-files", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
+    body: JSON.stringify({}),
+  });
+  return res.json();
+}
+
+export async function ragStats() {
+  const res = await fetch("/rag-stats", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
+    body: JSON.stringify({}),
+  });
+  return res.json();
+}
+
+export async function ragUpload(filename: string, contentBase64: string, overwrite = false) {
+  const res = await fetch("/rag-upload", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
+    body: JSON.stringify({ filename, content: contentBase64, overwrite }),
+  });
+  return res.json();
+}
+
+export async function ragExportDb(data: any) {
+  const res = await fetch("/rag-export-db", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
+    body: JSON.stringify({ data }),
+  });
+  return res.json();
+}
+
 /**
  * Get conversation history (for restoring chat after page refresh).
  *

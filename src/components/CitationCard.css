@@ -11,7 +11,7 @@
 
 .citation-card:hover {
   border-color: var(--border-accent);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 /* ── Amber Accent Strip (left) ─────────── */
@@ -46,8 +46,8 @@
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='100' preserveAspectRatio='none'%3E%3Cpath d='M0,0 Q6,4 2,8 Q8,12 1,16 Q7,20 3,24 Q9,28 2,32 Q6,36 1,40 Q8,44 3,48 Q7,52 2,56 Q9,60 1,64 Q6,68 3,72 Q8,76 2,80 Q7,84 1,88 Q9,92 3,96 Q6,100 0,100 L12,100 L12,0 Z' fill='white'/%3E%3C/svg%3E");
   mask-size: 12px 100%;
   -webkit-mask-size: 12px 100%;
-  background: var(--accent-dim);
-  opacity: 0.6;
+  background: var(--accent-subtle);
+  opacity: 0.5;
 }
 
 /* ── Citation Body ─────────────────────── */
@@ -129,7 +129,7 @@
 }
 
 .citation-page-item {
-  background: var(--bg-primary);
+  background: #f8fafc;
   border: 1px solid var(--border);
   border-radius: var(--radius-xs);
   overflow: hidden;
@@ -140,7 +140,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
-  background: var(--bg-tertiary);
+  background: #f1f5f9;
   border-bottom: 1px solid var(--border);
 }
 
@@ -220,7 +220,7 @@
   left: 0;
   right: 0;
   height: 40px;
-  background: linear-gradient(transparent, var(--bg-primary));
+  background: linear-gradient(transparent, #f8fafc);
   pointer-events: none;
 }
 

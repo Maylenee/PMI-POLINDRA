@@ -1,0 +1,35 @@
+14  
+  
+3. Sub-bab 3.3. berisi kegiatan perawatan bagian pengecoran,  
+4. Dst. 
+B. Contoh kegiatan magang di bidang Teknik Informatika 
+1. Sub-bab 3.1. berisi orientasi industri,   
+2. Sub-bab 3.2. berisi troubleshooting jaringan LAN pada kantor x,  
+3. Sub-bab 3.3. berisi pembuatan database karyawan,  
+4. Dst. 
+C. Contoh kegiatan magang di bidang Teknik Pendingin dan Tata Udara 
+1. Sub-bab 3.1. berisi orientasi industri,   
+2. Sub-bab 3.2. berisi perancangan sistem tata udara toko xx,  
+3. Sub-bab 3.3. berisi perbaikan cold storage di bagian xx 
+4. Dst. 
+Pada sub-bab tersebut dibahas seluruh aspek kegiatan yang dilakukan misalnya 
+permasalahan yang ada, troubleshooting, pengujian dan lain-lain, termasuk kajian 
+teoritis (dasar teori) yang menunjang kegiatan juga perlu disampaikan. 
+3.1.2.4. Bab IV Penutup 
+Berisi kesimpulan dari kegiatan magang dan saran -saran untuk industri 
+maupun untuk program studi. Bab IV dibatasi maksimal 2 halaman. 
+3.1.3. Bagian Akhir 
+Bagian akhir laporan PMI terdiri dari 2 (dua) bagian, yaitu daftar pustaka dan 
+lampiran. Pemberian nomor halaman pada bagian akhir mengacu pada sub bab 
+3.1.4.10 Pasal B.   
+3.1.3.1. Daftar Pustaka 
+Daftar pustaka memuat semua pustaka atau sumber yang dikutip dan dijadikan 
+sebagai acuan dalam penulisan laporan PMI. Daftar ini berguna untuk membantu 
+pembaca yang ingin mencocokkan kutipan -kutipan yang terdapat dalam laporan 
+PMI. Penulisan daftar pustaka ditetapkan sebagai berikut: 
+1. Penulisan nama pada daftar pustaka diawali dengan nama keluarga terlebih 
+dahulu. 
+Contoh: 
+ Nama penulis yang terdiri dari dua kata, misalnya Nuriyana Siregar  
+maka menjadi: Siregar, Nuriyana. 
+14

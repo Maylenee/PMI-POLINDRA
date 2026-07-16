@@ -1,0 +1,33 @@
+10  
+  
+BAB III 
+LAPORAN PMI  
+  
+Pada bab ini dijelaskan bahwa laporan PMI terbagi menjadi dua, yaitu buku 
+laporan PMI dan soft file laporan PMI. Pada sub bab buku laporan PMI dijelaskan 
+mengenai garis besar penulisan buku laporan  PMI. Sedangkan pada sub bab soft 
+file laporan PMI dijelaskan tentang format file laporan PMI. 
+ 
+3.1. Buku Laporan PMI 
+Pada bagian ini  dijelaskan mengenai bagian -bagian pada buku laporan PMI  
+serta tata cara penulisannya. Bagian pada buku laporan PMI ada tiga, yaitu bagian 
+awal, bagian utama, dan bagian akhir. 
+3.1.1. Bagian Awal 
+Bagian awal laporan PMI dapat memuat 9 (sembilan) bagian, yaitu halaman 
+sampul depan, halaman sampul dalam, halaman pengesahan, halaman pernyataan 
+keaslian, halaman kata pengantar, halaman daftar isi, halaman daftar tabel, halaman 
+daftar gambar, halaman daftar lampiran.  Pemberian nomor halaman pada bagian 
+awal mengacu pada sub bab 3.1.4.10 Pasal A. 
+3.1.1.1. Halaman Sampul Depan   
+Halaman sampul depan memuat 4 (empat) bagian, yaitu judul laporan PMI, 
+logo POLINDRA, nama dan Nomor Induk Mahasiswa (NIM) penulis, nama 
+perguruan tinggi dan tahun seminar PMI. Adapun c ontoh sampul depan dapat 
+dilihat pada Lampiran 4. 
+A. Judul Laporan PMI 
+1. Diketik dengan huruf kapital dan tidak boleh disingkat, kecuali PT dan CV 
+pada sebelum nama industri.  
+2. Diawali dengan “LAPORAN PROGRAM MAGANG INDUSTRI …”. 
+3. Terdapat keterangan nama lengkap industri. 
+4. Terdapat keterangan bagian atau divisi pekerjaan atau peran yang 
+didapatkan selama melaksanakan PMI. 
+5. Terdapat keterangan kota atau kabupaten tempat pelaksanaan PMI.

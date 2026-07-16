@@ -1,0 +1,35 @@
+23  
+  
+4. Penulisan kutipan harus menyebutkan sumbernya. Seperti contoh pada sub 
+bab 3. 1.4.12 tentang kutipan, menyebutkan bahwa sumber diambil dari 
+buku karangan Harinaldi, yang terbit pada tahun 2008. Informasi 
+mengenai penerbit dan judul buku dapat dilihat di Daftar Pustaka. Adapun 
+tata cara penulisan daftar pustaka dapat dilihat pada sub bab 3.1.3.1. 
+5. Jika kutipan terdiri dari satu pengarang, maka hanya dituliskan nama 
+keluarganya dan tahun terbit. Misalnya, …………….. (Gozali, 2010). 
+6. Jika kutipan terdiri dari dua pengarang, maka dituliskan nama keluarganya 
+masing-masing yang di pisahkan dengan kata hubung ‘dan’. Misalnya, 
+……. (Sathyaraj dan Prabu 2015). 
+7. Jika kutipan terdiri dari tiga atau lebih pengarang, maka dituliskan nama 
+keluarga dari orang pertama saja dan diberi keterangan et al . Misalnya, 
+…….. (Hartono et al. 2018). 
+8. Style yang digunakan untuk penulisan kutipan mengacu pada American 
+Political Science Association. 
+ 
+3.2. Soft File Laporan PMI 
+Pada sub bab ini dibahas mengenai format penamaan file beserta jenis file yang 
+diunggah ke laman resmi PMI. 
+3.2.1. Penamaan File 
+1. Penamaan file dokumen diawali dengan nim dan dilanjutkan dengan nama 
+lengkap mahasiswa (huruf pertama kapital). 
+2. Nama file tidak mengandung spasi, tetapi menggunakan tanda hubung 
+underscore. 
+3. Penamaan project (aplikasi atau hasil lainnya ) disesuaikan dengan nama 
+aslinya dan disesuaikan dengan poin nomor 2. 
+3.2.2. Jenis File 
+1. Jenis dokumen terbagi menjadi dua format, yaitu *.docx dan *.pdf. 
+2. Laporan PMI disajikan ke dalam satu file *.docx (tidak dipisah per bab atau per 
+bagian lainnya)  
+3. Isi dan nama file laporan PMI dari jenis file *.docx dan *.pdf harus sama. 
+4. Project harus di-compress ke dalam format *.zip. 
+23

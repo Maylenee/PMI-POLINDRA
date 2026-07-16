@@ -1,0 +1,35 @@
+16  
+  
+Darlis,  Edfan. 2000. Analisis Pengaruh Komitmen Organisasional dan 
+Ketidakpastian Lingkungan terhadap Hubungan antara Partisipasi 
+Anggaran dengan Senjangan Anggaran. Tesis S-2 tidak dipublikasikan. 
+Yogyakarta: Program Pascasarjana Universtitas Gajah Mada. 
+3.1.3.2. Lampiran 
+Lampiran dapat berisi tabel yang panjang, gambar struktur organisasi yang 
+panjang, gambar teknik, source code program, peraturan-peraturan dan sebagainya 
+yang berfungsi melengkapi laporan PMI. Selain itu, l ampiran wajib berisi 
+rekapitulasi Form Daftar Hadir Mahasiswa dan Form Laporan Kegiatan yang 
+ASLI. 
+Lampiran wajib diberi nomor urut lampiran dan  diberi keterangan tentang 
+nama lampiran. Nomor lampiran beserta keterangannya diketik di dalam kotak (text 
+box) yang diletakkan di bagian header. Khusus untuk Form Daftar Hadir dan Form 
+Laporan Kegiatan, hanya pada lembar pertama saja yang diberikan nomor urut 
+lampiran dan nama lampiran. 
+3.1.4. Tata Cara Pengetikan 
+Pada bagian ini dijelaskan tata cara penulisan yang mencakup 1 2 (dua belas) 
+bahasan, yaitu sampul buku laporan PMI, jenis huruf, tata bahasa, potongan kode 
+program, pencetakan, jarak baris, batas pengetikan, alinea baru, pembagian bab, sub 
+bab, dan sub sub-bab, pemberian nomor halaman, tabel dan gambar, serta kutipan. 
+3.1.4.1. Sampul Buku Laporan PMI  
+Sampul menggunakan hard cover  dengan tinta berwarna emas. Bagian 
+samping hard cover dibuat sebagaimana contoh pada Lampiran 11. Adapun warna 
+sampul, tali pembatas dan kertas pembatas ditentukan sebagai berikut: 
+A. Warna Sampul 
+1. Teknik Mesin   : Biru Dongker 
+2. Teknik Informatika   : Oranye 
+3. Teknik Pendingin dan Tata Udara : Merah 
+B. Tali dan Kertas Pembatas 
+1. Teknik Mesin   : Oranye 
+2. Teknik Informatika   : Biru Dongker 
+3. Teknik Pendingin dan Tata Udara : Hijau 
+16

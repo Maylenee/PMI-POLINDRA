@@ -1,0 +1,35 @@
+13  
+  
+urutan tabel. Nomor urutan tabel dimulai dari angka 1 lagi ketika pindah bab. Spasi 
+pada daftar tabel adalah 1,5. Contoh daftar tabel terdapat pada Lampiran 8. 
+3.1.1.8. Halaman Daftar Gambar   
+Apabila pada laporan PMI terdapat satu atau lebih gambar, maka perlu dibuat 
+daftar gambar secara berurutan sesuai dengan urutan gambar pada laporan PMI. 
+Gambar yang dapat terdiri atas grafik, foto, diagram, atau bagan diberi nomor urut 
+dengan angka latin. Nomor gambar d idahului dengan nomor bab, diikuti dengan 
+nomor urutan gambar. Spasi pada daftar gambar adalah 1,5. Contoh daftar gambar 
+dapat dilihat pada Lampiran 9. 
+3.1.1.9. Halaman Daftar Lampiran  
+Sama halnya dengan daftar tabel dan daftar gambar, daftar lampiran dibuat bila 
+lampiran PMI dilengkapi dengan lampiran. Isi halaman ini adalah urutan judul 
+lampiran dan tanpa disertai nomor halamannya. Contoh daftar lampiran bisa dilihat 
+pada Lampiran 10. 
+3.1.2. Bagian Utama 
+Bagian utama laporan PMI berisi 4 (empat) bab yaitu pendahuluan, tinjauan 
+umum industri, kegiatan magang, dan penutup.  Pemberian nomor halaman pada 
+bagian utama mengacu pada sub bab 3.1.4.10 Pasal B. 
+3.1.2.1. Bab I Pendahuluan 
+Bab ini memuat latar belakang, tujuan dan ruang lingkup pelaksanaan PMI di 
+industri yang menjadi tempat PMI. Bab I dibatasi maksimal 3 halaman. 
+3.1.2.2. Bab II Tinjauan Umum Industri 
+Bab ini berisi informasi umum industri (lokasi, jumlah pekerja, jumlah 
+plant/kantor cabang, pemilik modal, dll), struktur organisasi, produk/jasa industri. 
+Bab 2 dibatasi maksimal 7 halaman. 
+3.1.2.3. Bab III Kegiatan Magang 
+Bab ini berisi deskripsi kegiatan magang secara keseluruhan yang dibuat dalam 
+sub-bab (bukan berupa tabel rekapitulasi kegiatan magang harian/mingguan). Bab 
+III dibatasi minimal 10 halaman. 
+A. Contoh kegiatan magang di bidang Teknik Mesin 
+1. Sub-bab 3.1. berisi orientasi industri,   
+2. Sub-bab 3.2. berisi perancangan alat bantu permesinan produk baru,   
+13

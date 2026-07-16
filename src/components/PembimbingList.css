@@ -1,0 +1,370 @@
+.pmb-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pmb-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.pmb-summary-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.pmb-summary-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2563eb;
+  line-height: 1.2;
+}
+
+.pmb-summary-label {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+.pmb-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.pmb-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.pmb-controls-label {
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pmb-select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  background: #fff;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.pmb-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pmb-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pmb-search input {
+  padding: 10px 16px 10px 36px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  width: 240px;
+  background: #fff;
+  color: #0f172a;
+  box-sizing: border-box;
+}
+
+.pmb-search input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.pmb-search svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+}
+
+.pmb-export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #16a34a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pmb-export-btn:hover {
+  background: #15803d;
+}
+
+.pmb-table-wrap {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.pmb-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.pmb-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #334155;
+  font-size: 14px;
+  border-bottom: 2px solid #e2e8f0;
+  background: #f8fafc;
+  white-space: nowrap;
+}
+
+.pmb-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.pmb-table tbody tr:hover {
+  background: #f1f5f9;
+}
+
+.pmb-prodi {
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.pmb-industri-cell {
+  font-weight: 500;
+}
+
+.pmb-nama-cell {
+  font-weight: 500;
+}
+
+.pmb-mono {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: #64748b;
+}
+
+.pmb-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.pmb-status.diterima {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.pmb-status.proses {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.pmb-empty {
+  text-align: center;
+  padding: 40px !important;
+  color: #64748b;
+}
+
+.pmb-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.pmb-info {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.pmb-pagination {
+  display: flex;
+  gap: 6px;
+}
+
+.pmb-page-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pmb-page-btn:hover {
+  background: #f1f5f9;
+}
+
+.pmb-page-btn.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.pmb-page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── View tabs ─────────────────────────── */
+.pmb-view-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.pmb-view-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.pmb-view-tab:hover {
+  color: #1e40af;
+}
+
+.pmb-view-tab.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+/* ── Seminar cards ─────────────────────── */
+.pmb-seminar-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+}
+
+.pmb-seminar-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8fafc;
+  transition: box-shadow 0.2s;
+}
+
+.pmb-seminar-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.pmb-seminar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pmb-seminar-nama {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.pmb-seminar-hari {
+  font-size: 12px;
+  font-weight: 600;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.pmb-seminar-body {
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pmb-seminar-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.pmb-seminar-info svg {
+  flex-shrink: 0;
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .pmb-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pmb-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pmb-controls-right {
+    flex-direction: column;
+  }
+
+  .pmb-search input {
+    width: 100%;
+  }
+
+  .pmb-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

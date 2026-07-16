@@ -1,0 +1,41 @@
+1.3. Sub Bab 
+…………………………………….……………………………………………
+………………..………………………… daftar kebutuhan bahan dan peralatan 
+membangun jaringan disajikan pada Tabel 1.1. 
+ 
+Tabel 1.1. Daftar Kebutuhan Bahan dan Peralatan Membangun Jaringan 
+No. Keterangan Bahan Alat 
+1 Isi tabel dibuat menjadi rata kiri, tidak justify … … 
+2 … … … 
+3 … … … 
+dst.    
+ 
+Pada Tabel 1.1. terdapat ………………. . Sebagai informasi tambahan, apabila 
+ada Tabel yang barisnya melewati halaman, maka kolom pada Tabel tersebut wajib 
+ada pada halaman selanjutnya, agar pembaca mudah memahami isi tabel tanpa 
+harus kembali ke halaman sebelumnya. Adapun contoh Tabel yang melanjutkan ke 
+halaman selanjutnya dapat dilihat pada Tabel 1.2. 
+A. Pasal di Bagian Sub Bab 
+…………………………………………………………………………...……
+………………………………………………………………………...… 
+………. dapat dilihat pada Gambar 1.1. 
+ 
+ 
+ 
+ 
+ 
+ 
+Gambar 1.1. Kaleng Bekas yang Dilapisi Kertas Karbon 
+ 
+Berdasarkan Gambar 1.1. kaleng bekas tersebut………. Adapun contoh 
+Tabel yang berlanjut ke halaman selanjutnya dapat dilihat pada Tabel 1.2. 
+ 
+Tabel 1.2. Tabel yang Berlanjut ke Halaman Selanjutnya 
+No Kolom Pertama Kolom Kedua Kolom Ketiga 
+1 Isi tabel dibuat menjadi 
+rata kiri, tidak justify 
+Isi tabel dibuat menjadi 
+rata kiri, tidak justify 
+Isi tabel dibuat menjadi 
+rata kiri, tidak justify 
+LAMPIRAN 13. CONTOH PENULISAN JUDUL TABEL DAN GAMBAR

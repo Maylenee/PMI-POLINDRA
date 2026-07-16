@@ -1,0 +1,33 @@
+19  
+  
+seterusnya). Semua kata dimulai dengan huruf besar, kecuali kata sambung dan 
+kata depan, tanpa diakhiri dengan titik, serta dicetak tebal.   
+3. Sub sub-bab. Nomor yang digunakan adalah angka latin dari bab, nomor sub 
+bab, diikuti dengan nomor urut dari sub  sub-bab dengan dipisahkan titik 
+(contoh: 1.1.1, 1.1.2, dan seterusnya). Semua kata dimulai dengan huruf besar, 
+kecuali kata sambung dan kata depan, tanpa diakhiri dengan titik.   
+4. Anak sub sub-bab. Nomor pada bagian ini menggunakan angka latin dari bab, 
+nomor sub bab diikuti dengan nomor urut dari sub sub-bab, diikuti nomor anak 
+sub sub-bab dengan dipisahkan titik (contoh: 1.1.1.1, 1.1.1.2, dan seterusnya). 
+Semua kata dimulai dengan huruf besar, kecuali kata sambung dan kata depan, 
+tanpa diakhiri dengan titik.   
+5. Pasal. Pengetikan p asal menggunakan huruf abjad kapital yang diikuti titik 
+(contoh: A. Pasal Pertama, B. Pasal Kedua, dan seterusnya). 
+6. Ayat. Pengetikan ayat menggunakan angka latin yang diikuti titik (contoh: 1.  
+Ayat Pertama, 2. Ayat Kedua, dan seterusnya). 
+3.1.4.10. Pemberian Nomor Halaman 
+Pada bagian ini dijelaskan mengenai aturan pemberian nomor halaman pada 
+laporan. Nomor halaman dibagi menjadi dua, yaitu nomor halaman bagian awal  
+serta nomor halaman bagian utama dan bagian akhir. 
+A. Nomor Halaman Bagian Awal   
+Pada bagian awal laporan PMI nomor halaman yang digunakan adalah angka 
+romawi kecil (i, ii, iii, … dan seterusnya) diletakkan ditengah kertas bagian 
+bawah dengan jarak 1,5 cm dari tepi bawah. Untuk halaman sampul depan dan 
+dalam, nomor halaman tidak ditulis tetapi harus diperhitungkan. 
+B. Nomor Halaman Bagian Utama dan Bagian Akhir   
+Pada bagian utama dan akhir nomor halaman yang digunakan adalah angka 
+latin (1, 2, 3, … dan seterusnya), ditulis di sebelah pojok kanan bawah dengan 
+jarak 3 cm dari te pi kanan dan 1,5 cm dari tepi atas. Kecuali untuk halaman 
+yang terdapat judul Bab, maka nomor halaman ditulis di tengah bagian bawah 
+dengan jarak 1,5 cm dari tepi bawah. 
+19

@@ -1,57 +1,48 @@
-import { useRef } from "react";
-import { I18nProvider, LangToggle, useT } from "./i18n";
+import { useState, useCallback, useEffect } from "react";
+import { I18nProvider } from "./i18n";
 import RagChat from "./components/RagChat";
-import KnowledgeBaseSummary from "./components/KnowledgeBaseSummary";
-import GitHubLink from "./components/GitHubLink";
-import DeployLink from "./components/DeployLink";
+import AppHeader from "./components/AppHeader";
+import AdminPanel from "./components/AdminPanel";
+import LoginPage, { isLoggedIn, logout } from "./components/LoginPage";
+import MapView from "./components/MapView";
+import PembimbingList from "./components/PembimbingList";
+import JadwalSeminar from "./components/JadwalSeminar";
 import "./App.css";
 
-const CONVERSATION_ID_KEY = "rag_conversation_id";
-
-/**
- * Hoisted to App so multiple children (RagChat, KnowledgeBaseSummary)
- * can share the same per-browser conversation id without each one
- * minting its own. KnowledgeBaseSummary needs it because the EdgeOne
- * agents/ runtime requires every agents/* request (including read-only
- * ones like /rag-stats) to carry Markers-Conversation-Id.
- */
-function getOrCreateConversationId(): string {
-  const cached = localStorage.getItem(CONVERSATION_ID_KEY);
-  if (cached) return cached;
-  const id = crypto.randomUUID();
-  localStorage.setItem(CONVERSATION_ID_KEY, id);
-  return id;
-}
+type ChatTab = "chat" | "map" | "pembimbing" | "seminar";
 
 export default function App() {
+  const [mode, setMode] = useState<"chat" | "admin">("chat");
+  const [tab, setTab] = useState<ChatTab>("chat");
+  const [authed, setAuthed] = useState(isLoggedIn);
+
+  const handleToggle = useCallback(() => { setMode(mode === "chat" ? "admin" : "chat"); }, [mode]);
+  const handleLogin = useCallback(() => { setAuthed(true); setMode("admin"); }, []);
+  const handleLogout = useCallback(() => { logout(); setAuthed(false); setMode("chat"); }, []);
+
+  useEffect(() => {
+    const titles: Record<string, string> = {
+      chat: "PMI Chat",
+      map: "Sebaran Industri — PMI Polindra",
+      pembimbing: "Pembimbing — PMI Polindra",
+      seminar: "Jadwal Seminar — PMI Polindra",
+    };
+    document.title = titles[tab] || "PMI Polindra";
+  }, [tab]);
+
   return (
     <I18nProvider>
-      <LangToggle />
-      <AppInner />
-      <GitHubLink />
-      <DeployLink />
+      <div className={`app-shell ${mode === "admin" && authed ? "app-shell--full" : ""} ${mode === "chat" && tab !== "chat" ? "app-shell--wide" : ""}`}>
+        {mode === "chat" && <AppHeader mode={mode} onToggle={handleToggle} tab={tab} onTabChange={setTab} />}
+        <main className="app-main">
+          {mode === "chat" && tab === "chat" && <RagChat />}
+          {mode === "chat" && tab === "map" && <MapView />}
+          {mode === "chat" && tab === "pembimbing" && <PembimbingList />}
+          {mode === "chat" && tab === "seminar" && <JadwalSeminar />}
+          {mode === "admin" && !authed && <LoginPage onLogin={handleLogin} />}
+          {mode === "admin" && authed && <AdminPanel onLogout={handleLogout} onBack={handleToggle} />}
+        </main>
+      </div>
     </I18nProvider>
-  );
-}
-
-function AppInner() {
-  const { t } = useT();
-  const conversationIdRef = useRef<string>(getOrCreateConversationId());
-  return (
-    <div className="app-shell">
-      <header className="app-header">
-        <div className="app-brand">
-          <div className="brand-mark" />
-          <div className="brand-text">
-            <h1>{t("app.title")}</h1>
-            <p>{t("app.subtitle")}</p>
-          </div>
-        </div>
-      </header>
-      <main className="app-main">
-        <KnowledgeBaseSummary conversationId={conversationIdRef.current} />
-        <RagChat />
-      </main>
-    </div>
   );
 }

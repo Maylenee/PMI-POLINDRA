@@ -3,10 +3,30 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { sendMessageStream, fetchConversationHistory, stopAgent } from "../api";
 import CitationCard from "./CitationCard";
+import KnowledgeBaseSummary from "./KnowledgeBaseSummary";
 import { useT } from "../i18n";
 import "./RagChat.css";
 
 const CONVERSATION_ID_KEY = "rag_conversation_id";
+const MESSAGES_KEY = (id: string) => `rag_messages_${id}`;
+
+function loadStoredMessages(id: string) {
+  try {
+    const raw = localStorage.getItem(MESSAGES_KEY(id));
+    if (raw) return JSON.parse(raw);
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+function saveStoredMessages(id: string, messages: any[]) {
+  try {
+    localStorage.setItem(MESSAGES_KEY(id), JSON.stringify(messages));
+  } catch {
+    /* ignore */
+  }
+}
 
 /**
  * Some LLMs (especially fast/streaming tiers) emit Markdown tables as a
@@ -100,6 +120,16 @@ export default function RagChat() {
       return;
     }
 
+    // Prefer locally persisted messages (survives reloads without depending on
+    // the backend session store, which can be ephemeral).
+    const stored = loadStoredMessages(conversationIdRef.current);
+    if (stored && stored.length > 0) {
+      setMessages(stored);
+      setHistoryLoading(false);
+      return;
+    }
+
+    // Fallback: ask the backend for conversation history.
     if (_historyFetchInFlight) return;
     _historyFetchInFlight = true;
 
@@ -128,6 +158,14 @@ export default function RagChat() {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages, status]);
+
+  // Persist messages locally so a page refresh restores the session.
+  useEffect(() => {
+    if (historyLoading) return;
+    if (status === "streaming") return;
+    if (messages.length === 0) return;
+    saveStoredMessages(conversationIdRef.current, messages);
+  }, [messages, status, historyLoading]);
 
   const handleSend = useCallback(
     (text) => {
@@ -297,7 +335,8 @@ export default function RagChat() {
   }, []);
 
   const handleClear = useCallback(() => {
-    // Reset conversation — new UUID
+    // Reset conversation — new UUID and clear persisted messages
+    localStorage.removeItem(MESSAGES_KEY(conversationIdRef.current));
     localStorage.removeItem(CONVERSATION_ID_KEY);
     const newId = crypto.randomUUID();
     localStorage.setItem(CONVERSATION_ID_KEY, newId);
@@ -387,6 +426,7 @@ export default function RagChat() {
                 </button>
               ))}
             </div>
+            <KnowledgeBaseSummary conversationId={conversationIdRef.current} />
           </div>
         )}
 

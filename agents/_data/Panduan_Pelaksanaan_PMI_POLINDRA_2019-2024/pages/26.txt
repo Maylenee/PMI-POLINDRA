@@ -1,0 +1,34 @@
+20  
+  
+3.1.4.11. Tabel dan Gambar 
+Pada bagian ini dijelaskan mengenai aturan penulisan judul tabel dan gambar 
+pada laporan PMI. Adapun contoh pada sub bab ini dapat dilihat pada Lampiran 13. 
+A. Tabel 
+1. Penulisan nomor dan judul tabel diletakan di atas tabel.   
+2. Nomor tabel menggunakan angka latin yang ditempatkan di atas tabel 
+simetris kiri kanan. 
+3. Nomor tabel didahului dengan angka yang menunjukkan  bahwa tabel 
+tersebut berada pada bab berapa dan diikuti nomor urut tabel pada bab 
+tersebut (dalam setiap bab nomor tabel dimulai dari nomor 1).   
+4. Judul tabel diketik dengan huruf pertama kapital kecuali kata sambung dan 
+kata depan. 
+5. Judul tabel dibuat simetris kiri kanan (justify).   
+6. Kata “Tabel” dan penomorannya, pada judul tabel dicetak tebal (bold).  
+7. Kolom-kolom dalam tabel harus ditambahkan nama kolom dan dijaga agar 
+pemisahan antara kolom yang satu dengan kolom yang lain tegas.   
+8. Nama kolom pada tabel dicetak tebal. 
+9. Tabel harus disertai penjelasan pada paragraf.   
+10. Isi tabel dibuat rata kiri (Align Left). 
+11. Jika isi tabel terlalu banyak sehingga memuat satu halaman penuh atau 
+lebih, maka tabel tersebut dijadikan sebagai lampiran. 
+12. Jika tabel pada lampiran terlalu lebar atau kolom terlalu banyak maka 
+dapat disajikan secara horizontal (landscape) dan bagian atas tabel harus 
+diletakkan di sebelah kiri atau memakai kertas dobel kuarto, setelah dijlid 
+kertas dilipat kedalam sehingga tidak melebihi format. 
+B. Gambar 
+1. Yang termasuk k ategori gambar yaitu bagan, grafik, foto, lukisan, iklan 
+dan sebagainya. 
+2. Penulisan nomor dan judul gambar diletakan di bawah gambar.   
+3. Nomor gambar menggunakan angka latin yang  ditempatkan di bawah 
+gambar simetris kiri kanan. 
+20

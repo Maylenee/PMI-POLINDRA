@@ -1,0 +1,35 @@
+18  
+  
+3.1.4.5. Pencetakan   
+Tinta yang digunakan untuk mencetak buku laporan PMI adalah tinta berwarna 
+dengan ketentuan sebagai berikut:  
+1. Pencetakan naskah teks harus berwarna hitam, sedangkan gambar harus sesuai 
+dengan warna pada gambar aslinya.   
+2. Penggandaan naskah dapat dilakukan dengan mesin fotocopy dengan tinta 
+hitam kecuali gambar. 
+3.1.4.6. Jarak Baris 
+Jarak antara baris satu dengan yang lain dibuat 1,5 spasi, kecuali kutipan 
+langsung yang panjangnya lebih dari 3 baris menggunakan spasi tunggal atau satu 
+spasi. 
+3.1.4.7. Batas Pengetikan (margin pengetikan)   
+Batas-batas pengetikan diatur sebagai berikut: 
+1. Tepi atas (top)  : 3 cm   
+2. Tepi bawah (bottom) : 3 cm   
+3. Tepi kiri (left)  : 4 cm   
+4. Tepi kanan (right) : 3 cm  
+5. Header   : 2 cm  
+6. Footer   : 1,65 cm   
+3.1.4.8. Alinea Baru  
+Tiap-tiap baris dari suatu alinea dimulai dengan ketukan huruf pertama agak 
+menjorok ke dalam sebanyak 7 (tujuh) ketukan atau 1 (satu) tab berdasarkan dari 
+margin/batas kiri. 
+3.1.4.9. Pembagian Bab, Sub bab, Sub sub-bab, dan Seterusnya 
+Pada bagian ini dijelaskan mengenai aturan pengetikan dari pembagian bab, 
+sub bab, dan seterusnya. Adapun contoh penulisannya ada di Lampiran 12. 
+1. Bab. Nomor bab yang digunakan angka romawi besar (I, II, III, dan 
+seterusnya). Bab ditulis dengan huruf besar (kapital) semua dan diatur simetris 
+kiri-kanan (center) tanpa diakhiri dengan titik serta dicetak tebal. Bab disebut 
+judul peringkat 1.   
+2. Sub bab. Nomor sub-bab yang digunakan angka latin dari bab diikuti dengan 
+nomor urut dari sub bab dengan dipisahkan titik (contoh: 1.1, 1.2, dan 
+18

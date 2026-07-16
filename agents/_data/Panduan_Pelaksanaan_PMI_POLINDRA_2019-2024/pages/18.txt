@@ -1,0 +1,34 @@
+12  
+  
+3.1.1.4. Halaman Pernyataan Keaslian   
+Halaman pernyataan keaslian berisi pernyata an yang menjelaskan bahwa 
+laporan PMI tersebut bukan merupakan hasil plagiasi dan juga bukan berupa karya 
+orang lain. Contoh halaman pernyataan keaslian dapat dilihat pada Lampiran 6. 
+3.1.1.5. Halaman Kata Pengantar   
+Kata pengantar berisi ungkapan rasa terima kasih penulis kepada beberapa 
+pihak yang telah membantu dalam pelaksanaan PMI dan penyusunan laporan PMI. 
+Kata pengantar dibuat secara ringkas tidak lebih dari satu halaman. Ungkapan rasa 
+terima kasih memuat nama  lengkap, jabatan, dan jasa yang telah diber ikan dari 
+pihak tersebut. Pihak yang dimaksud antara lain, ketua jurusan, koordinator PMI, 
+pembimbing industri, dan dosen pembimbing. 
+3.1.1.6. Halaman Daftar Isi   
+Daftar isi memuat petunjuk global mengenai seluruh isi yang terdapat pada 
+buku laporan PMI. Daftar isi disusun secara sistematis sesuai dengan urutan isi yang 
+disajikan dari halaman pertama hingga halaman terakhir.  Format penulisan judul 
+bab di dalam daftar isi menggunakan huruf kapital dan tanpa ditutup dengan tanda 
+baca apapun. Apabila nama bab cukup panjang sehingga lebih dari satu baris, maka 
+bisa diteruskan pada baris berikutnya. Namun , kutipan nomor halamannya 
+ditempatkan di belakang baris terakhir, bukan di belakang baris pertama. 
+Bab dapat dibagi menjadi beberapa sub bab, sub bab dapat dibagi lagi menjadi 
+sub sub-bab, dan seterusnya. Sub bab ditempatkan mulai dari sebelah kiri dengan 
+indentasi yang sama dengan huruf pertama nama bab. Nama sub bab diawali dengan 
+huruf kapital, kecuali kata depan atau kata sambung. Apabila sub bab dibagi lagi ke 
+dalam sub sub-bab, maka penulisan sub sub -bab dimulai dari indentasi yang lurus 
+dengan huruf pertama nama sub bab di atasnya, begitupun seterusnya. Adapun spasi 
+pada daftar isi adalah 1,5. Contoh daftar isi terdapat pada Lampiran 7. 
+3.1.1.7. Halaman Daftar Tabel  
+Apabila laporan PMI memuat satu atau lebih tabel, maka perlu dibuat daftar 
+tabel secara berurutan sesuai judul tabel untuk seluruh laporan PMI dan disertai 
+halamannya. Tabel-tabel diberi nomor urut dengan angka latin (misalnya: Tabel 
+1.1., 2.1., 3.1.). Nom or tabel didahului dengan nomor bab, diikuti dengan nomor 
+12

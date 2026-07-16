@@ -1,0 +1,38 @@
+17  
+  
+C. Keterangan 
+1. Pembatas berisi logo POLINDRA dengan radius 9 cm 
+2. Jenis kertas Concorde 
+3. HVS ukuran A4 (210 mm x 297 mm), ukuran 80 gram 
+3.1.4.2. Jenis Huruf   
+Berikut adalah beberapa aturan mengenai penggunaan jenis huruf pada laporan 
+PMI: 
+1. Naskah laporan diketik dengan jenis huruf Times New Roman, 12 pt 
+2. Script atau kode program diketik dengan jenis huruf Courier New, 10 pt. 
+3. Kata serapan atau istilah asing pada naskah laporan, dicetak miring (italic). 
+4. Merk atau nama produk diketik dengan jenis huruf Arial, 12 pt. 
+5. Judul tabel dan gambar diketik dengan jenis huruf Times New Roman, 10 pt. 
+6. Isi tabel diketik dengan jenis huruf Times New Roman, 10 pt. 
+7. Naskah dibuat dengan menggunakan program olah kata misalnya Microsoft 
+Office Word atau Open Office Writter. 
+3.1.4.3. Tata Bahasa 
+1. Laporan ditulis dengan menggunakan Bahasa Indonesia baku, sesuai dengan 
+ejaan bahasa Indonesia yang disempurnakan. 
+2. Naskah yang diketik menggunakan istilah yang telah diindonesiakan,  jika 
+menggunakan istilah asing maka harus diberikan tanda khusus, misalnya 
+dicetak miring (italic). 
+3. Kalimat dalam laporan tidak terdapat/menggunakan kata ganti orang, misalnya 
+Saya, Kami, dan sebagainya. 
+3.1.4.4. Potongan Kode Program 
+Pengetikan potongan kode program harus di dalam kotak (text box) dengan 
+spasi tunggal  dan berwana biru dengan kode warna “blue”. Batas kotak tidak 
+melebihi margin kertas yang ditentukan pada sub bab 3.1.4.7. Setiap kode program 
+yang disajikan pada naskah laporan harus diberi penjelasan. Jika kode program 
+penuh satu halaman, maka kode program harus dipindahkan ke lampiran. Adapun 
+contoh potongan kode program adalah sebagai berikut: 
+ 
+ 
+public void halloPMI(){ 
+  System.out.println(“Selamat mengerjakan laporan PMI!”); 
+} 
+17

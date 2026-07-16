@@ -1,0 +1,32 @@
+BAB I 
+JUDUL BAB 
+ 
+1.1. Sub Bab 
+……………………………………………………………………………......
+………………………… 
+ 
+1.2. Sub Bab 
+………………………………………………………………………………..
+………………………… 
+1.2.1. Sub Sub-bab 
+………………………………………………………………………………..
+……………………… 
+1.2.1.1. Anak Sub Sub-bab Pertama 
+………………………………………………………………………………..
+…………………………… 
+1. Ayat satu dari anak sub sub-bab pertama, ……………………………… . 
+2. Ayat dua dari anak sub sub-bab pertama, ……………………………… . 
+1.2.1.2. Anak Sub Sub-bab Kedua 
+………………………………………………………………………………..
+………………………… 
+A. Pasal Pertama 
+…………………………………………………………………………...……
+………………………………………………………...… 
+1. Ayat Satu Dari Pasal Pertama, ……………………………………… . 
+2. Ayat Dua Dari Pasal Pertama, ……………………………………… . 
+B. Pasal Kedua 
+…………………………………………………………………………...……
+………………….. 
+ 
+ 
+LAMPIRAN 12. PENULISAN BAB, SUB-BAB, DAN SETERUSNYA

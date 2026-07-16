@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-07-14T11:34:52.825579+00:00",
+  "generated_at": "2026-07-16T07:18:55.948899+00:00",
   "documents": [
     {
-      "docId": "对话存储",
+      "docId": "Panduan_Pelaksanaan_PMI_POLINDRA_2019-2024",
       "meta": {
-        "doc_name": "对话存储",
+        "doc_name": "Panduan Pelaksanaan PMI POLINDRA 2019-2024",
         "doc_description": "",
         "type": "pdf",
-        "page_count": 14,
+        "page_count": 52,
         "status": "completed",
-        "created": "2026-07-14T11:34:52.637939+00:00"
+        "created": "2026-07-16T07:18:55.872667+00:00"
       },
       "hasStructure": false,
-      "pages": 14,
-      "metaBytes": 168,
+      "pages": 52,
+      "metaBytes": 198,
       "structureBytes": 0,
-      "pageBytes": 16219,
-      "totalBytes": 16387
+      "pageBytes": 62690,
+      "totalBytes": 62888
     },
     {
-      "docId": "概览",
+      "docId": "pmi-data",
       "meta": {
-        "doc_name": "概览",
+        "doc_name": "pmi-data",
         "doc_description": "",
         "type": "pdf",
-        "page_count": 4,
+        "page_count": 2,
         "status": "completed",
-        "created": "2026-07-14T11:34:52.825093+00:00"
+        "created": "2026-07-16T07:18:55.946222+00:00"
       },
       "hasStructure": false,
-      "pages": 4,
-      "metaBytes": 161,
+      "pages": 2,
+      "metaBytes": 163,
       "structureBytes": 0,
-      "pageBytes": 5422,
-      "totalBytes": 5583
+      "pageBytes": 2379,
+      "totalBytes": 2542
     }
   ]
 }
