@@ -13,14 +13,11 @@ logger = create_logger("agent")
 def _build_document_catalog() -> str:
     """Render the knowledge base inventory into the system prompt.
 
-    Inlining the catalog lets the model skip the `search_document(doc_id="")`
-    discovery round, which used to be a mandatory first LLM turn before any
-    real retrieval could happen — the slowest part of first-token latency.
-
-    The catalog is built once at module load. If `_data/` is regenerated at
-    runtime the process must restart for the change to be picked up; this is
-    consistent with the existing one-shot prepare-rag pipeline and keeps the
-    hot path out of disk I/O.
+    The catalog lists every document so the model can pick a target doc_id
+    before calling `retrieve`. It uses the synchronous legacy `index.json`
+    loader (written by prepare-rag) so it can be built at module import time
+    without awaiting the async vector store. It is refreshed on process
+    restart, consistent with the one-shot prepare-rag pipeline.
     """
     docs = list_documents()
     if not docs:
@@ -35,11 +32,7 @@ def _build_document_catalog() -> str:
         doc_id = d.get("docId", "")
         meta = get_document_meta(doc_id) or {}
         name = meta.get("doc_name") or doc_id
-        desc = meta.get("doc_description") or ""
-        page_count = meta.get("page_count")
-        page_hint = f", {page_count} pages" if isinstance(page_count, int) else ""
-        desc_part = f" — {desc}" if desc else ""
-        lines.append(f"- doc_id={doc_id!r}: {name}{page_hint}{desc_part}")
+        lines.append(f"- doc_id={doc_id!r}: {name}")
     return "\n".join(lines)
 
 
@@ -56,23 +49,22 @@ RAG_SYSTEM_PROMPT = (
     "- If the question is unrelated to EdgeOne Makers, do not answer it and do not search the corpus. "
     "Instead, briefly guide the user to ask questions about EdgeOne Makers.\n"
     "- If the question is related to EdgeOne Makers or ambiguous but potentially relevant, continue with the retrieval workflow.\n\n"
-    "Retrieval workflow (optimized for first-token latency):\n"
-    "1. Pick the doc_id whose name / description in the catalog above best matches the user's question. "
-    "Do NOT call search_document with an empty doc_id — the catalog above already lists every document.\n"
-    "2. If the matching document is small (≤20 pages, see the catalog), you MAY skip the structure lookup "
-    "and call fetch_pages(doc_id, pages=\"1-N\") directly to read its content.\n"
-    "3. For larger documents, call search_document(doc_id=<id>) to inspect the structure, "
-    "then call fetch_pages(doc_id, pages) for the relevant page range.\n"
-    "4. If the picked document turns out to be wrong, switch to another candidate from the catalog "
-    "rather than giving up. You may consult multiple documents when relevant.\n"
-    "5. Base the final answer strictly on fetched page content, not prior knowledge or assumptions.\n\n"
+    "Retrieval workflow (semantic, token-efficient):\n"
+    "1. Call `retrieve(query, doc_id?)` with the user's question phrased as a natural-language query.\n"
+    "   The tool returns the top-K most relevant text chunks (with docId, docName, page, score) "
+    "and NOT whole pages — this keeps context small and latency low.\n"
+    "2. If the question clearly targets one document, pass its doc_id from the catalog to narrow the search; "
+    "otherwise omit doc_id to search across the whole knowledge base.\n"
+    "3. Read the returned `matches` and answer strictly from those chunks. If they are insufficient, "
+    "rephrase the query or retry `retrieve` without a doc_id rather than giving up.\n"
+    "4. Never fetch or paste full pages; the retrieved chunks are already the most relevant passages.\n\n"
     "Answering rules:\n"
     "- Respond in the same language as the user's question.\n"
     "- Do NOT add inline citations such as [DocumentName, p.3] in the answer text. "
-    "The platform renders source cards separately from the fetched pages, so duplicating them in prose is noise.\n"
+    "The platform renders source cards separately from the retrieved chunks, so duplicating them in prose is noise.\n"
     "- If sources conflict, state the conflict in plain language (e.g. \"the configuration guide and the API reference disagree on this\").\n"
-    "- If after checking all relevant documents the content is genuinely insufficient, clearly say so. "
-    "Never claim a topic is missing without first considering the catalog above.\n"
+    "- If after retrieval the content is genuinely insufficient, clearly say so. "
+    "Never claim a topic is missing without first calling `retrieve`.\n"
     "- Never invent document names, page numbers, citations, or facts.\n"
     "- If a tool call fails, explain the failure briefly and ask the user to retry or narrow the question."
 )
@@ -83,3 +75,4 @@ rag_agent = Agent(
     tools=RAG_TOOLS,
     model=llm_model,
 )
+
