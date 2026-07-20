@@ -426,7 +426,6 @@ export default function RagChat() {
                 </button>
               ))}
             </div>
-            <KnowledgeBaseSummary conversationId={conversationIdRef.current} />
           </div>
         )}
 
