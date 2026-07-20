@@ -37,12 +37,29 @@ Execution flow:
    (see agents/loader.js).
 """
 
+import asyncio
 import json
 import re
 import shutil
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+# Allow importing the local `agents/` package for chunking + embeddings.
+# The project's agents/ folder shares its name with the pip `openai-agents`
+# package (imported as `agents`), so we register the local folder as the
+# `agents` package explicitly. This only affects this prepare process and does
+# not touch the EdgeOne runtime, which wires things up differently.
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+AGENTS_DIR = PROJECT_ROOT / "agents"
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+import types  # noqa: E402
+
+_agents_pkg = types.ModuleType("agents")
+_agents_pkg.__path__ = [str(AGENTS_DIR)]  # type: ignore[attr-defined]
+sys.modules["agents"] = _agents_pkg
 
 # ── Configuration ────────────────────────────────────────────────────────────
 
@@ -182,7 +199,83 @@ def write_document(
         "structureBytes": structure_bytes,
         "pageBytes":      page_bytes,
         "totalBytes":     total_bytes,
+        # internal: raw pages for the vector-index stage
+        "_pages":         pages,
     }
+
+
+# ── Vector Index (chunk + embed + blob) ───────────────────────────────────────
+
+async def build_vector_index(entries: list[dict]) -> dict:
+    """Chunk every document, embed the chunks, and persist a vector index.
+
+    The index is written through the same blob path the runtime uses
+    (`agents/_vectorstore`), which falls back to disk here in the prepare
+    script (no EdgeOne context.store yet). At deploy time the same keys are
+    read from `context.store`, so nothing changes on the read side.
+    """
+    from agents._embeddings import embed_batch
+    from agents._vectorstore import (
+        _blob_put,
+        _INDEX_KEY,
+        _DOC_KEY_PREFIX,
+        chunk_text,
+    )
+
+    index_docs: list[dict] = []
+    total_chunks = 0
+
+    for entry in entries:
+        doc_id = entry["docId"]
+        doc_name = entry["meta"].get("doc_name", doc_id)
+        pages = entry.get("_pages", {})
+
+        # 1. chunk
+        chunks: list[dict] = []
+        for page_num, text in pages.items():
+            for c in chunk_text(text, page_num):
+                chunks.append(c)
+        if not chunks:
+            continue
+
+        # 2. embed (batch)
+        texts = [c["text"] for c in chunks]
+        embeddings = await embed_batch(texts)
+
+        # 3. assemble doc payload
+        dim = len(embeddings[0]) if embeddings else 0
+        doc_payload = {
+            "docId": doc_id,
+            "doc_name": doc_name,
+            "dim": dim,
+            "chunks": [
+                {
+                    "id": f"{doc_id}-{i}",
+                    "doc_id": doc_id,
+                    "page": c["page"],
+                    "text": c["text"],
+                    "embedding": embeddings[i],
+                }
+                for i, c in enumerate(chunks)
+            ],
+        }
+        await _blob_put(_DOC_KEY_PREFIX + doc_id, doc_payload)
+
+        index_docs.append({
+            "docId": doc_id,
+            "doc_name": doc_name,
+            "chunk_count": len(chunks),
+            "dim": dim,
+        })
+        total_chunks += len(chunks)
+        print(f"     Vectorized: {len(chunks)} chunks (dim={dim})")
+
+    index_payload = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "documents": index_docs,
+    }
+    await _blob_put(_INDEX_KEY, index_payload)
+    return {"documents": len(index_docs), "chunks": total_chunks}
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────
@@ -235,7 +328,7 @@ def main() -> None:
     # Summary statistics
     total_bytes = sum(e["totalBytes"] for e in index_entries)
 
-    # Write index.json
+    # Write index.json (legacy page-based manifest, kept for compatibility)
     index_payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "documents":    index_entries,
@@ -244,6 +337,14 @@ def main() -> None:
     index_path.write_text(
         json.dumps(index_payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
+    )
+
+    # Build the semantic vector index (chunk + embed + blob) — the token-saving path.
+    print("\n── Building vector index " + "─" * 38)
+    vec_summary = asyncio.run(build_vector_index(index_entries))
+    print(
+        f"   Vector docs: {vec_summary['documents']}  "
+        f"chunks: {vec_summary['chunks']}"
     )
 
     print(f"\n── Summary " + "─" * 48)
