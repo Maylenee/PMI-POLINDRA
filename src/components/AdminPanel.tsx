@@ -169,7 +169,7 @@ export default function AdminPanel({ onLogout, onBack }: { onLogout?: () => void
         {page !== "dashboard" && page !== "rag" && (
           <>
             <div className="admin-page-header">
-              <h2>{page === "industri" ? "Data Industri" : page === "mahasiswa" ? "Data Mahasiswa" : "Data Pembimbing"}</h2>
+              <h2>{page === "industri" ? "Data Industri" : page === "mahasiswa" ? "Data Mahasiswa" : page === "pembimbing" ? "Data Pembimbing" : "Kelompok Seminar"}</h2>
               <button className="admin-add-btn" onClick={() => { setShowForm(true); setEditId(null); }}>
                 <Plus size={16} /> Tambah {page === "industri" ? "Industri" : page === "mahasiswa" ? "Mahasiswa" : page === "pembimbing" ? "Pembimbing" : "Kelompok"}
               </button>

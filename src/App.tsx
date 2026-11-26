@@ -21,6 +21,7 @@ export default function App() {
   const handleLogout = useCallback(() => { logout(); setAuthed(false); setMode("chat"); }, []);
 
   useEffect(() => {
+    if (mode === "admin") { document.title = "PMI Admin — PMI Polindra"; return; }
     const titles: Record<string, string> = {
       chat: "PMI Chat",
       map: "Sebaran Industri — PMI Polindra",
@@ -28,7 +29,7 @@ export default function App() {
       seminar: "Jadwal Seminar — PMI Polindra",
     };
     document.title = titles[tab] || "PMI Polindra";
-  }, [tab]);
+  }, [tab, mode]);
 
   return (
     <I18nProvider>

@@ -45,6 +45,15 @@ interface SSEEvent {
   id?: string;
 }
 
+async function parseJson(res: Response) {
+  const text = await res.text();
+  try {
+    return JSON.parse(text);
+  } catch {
+    return { status: "error", error: `Endpoint ${new URL(res.url).pathname} tidak tersedia (HTTP ${res.status})` };
+  }
+}
+
 function conversationId() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
 }
@@ -55,7 +64,7 @@ export async function syncPmiData(data: any) {
     headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
     body: JSON.stringify({ data }),
   });
-  return res.json();
+  return parseJson(res);
 }
 
 export async function ragFullSync(data: any) {
@@ -64,7 +73,7 @@ export async function ragFullSync(data: any) {
     headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
     body: JSON.stringify({ data }),
   });
-  return res.json();
+  return parseJson(res);
 }
 
 export async function ragFiles() {
@@ -73,7 +82,7 @@ export async function ragFiles() {
     headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
     body: JSON.stringify({}),
   });
-  return res.json();
+  return parseJson(res);
 }
 
 export async function ragStats() {
@@ -82,7 +91,7 @@ export async function ragStats() {
     headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
     body: JSON.stringify({}),
   });
-  return res.json();
+  return parseJson(res);
 }
 
 export async function ragUpload(filename: string, contentBase64: string, overwrite = false) {
@@ -91,7 +100,7 @@ export async function ragUpload(filename: string, contentBase64: string, overwri
     headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
     body: JSON.stringify({ filename, content: contentBase64, overwrite }),
   });
-  return res.json();
+  return parseJson(res);
 }
 
 export async function ragExportDb(data: any) {
@@ -100,7 +109,7 @@ export async function ragExportDb(data: any) {
     headers: { "Content-Type": "application/json", "makers-conversation-id": conversationId() },
     body: JSON.stringify({ data }),
   });
-  return res.json();
+  return parseJson(res);
 }
 
 /**
